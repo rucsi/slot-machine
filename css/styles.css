@@ -1,0 +1,123 @@
+#slotMachine {
+    height: 140px;
+    margin: 0 auto;
+    -moz-perspective: 1100px;
+    -ms-perspective: 1100px;
+    -webkit-perspective: 1100px;
+    perspective: 1100px;
+    position: relative;
+    width: 140px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-perspective-origin: 50% 0;
+    -moz-perspective-origin: 50% 0;
+    -ms-perspective-origin: 50% 0;
+    perspective-origin: 50% 0;
+    -moz-transition: transform 1s ease 0s;
+    -o-transition: transform 1s ease 0s;
+    -webkit-transition: transform 1s ease 0s;
+    transition: transform 1s ease 0s;
+}
+
+#functions {
+    bottom: 0;
+    left: 50%;
+    margin-bottom: 10px;
+    margin-left: -150px;
+    position: absolute;
+    text-align: center;
+    width: 300px;
+}
+
+.reel {
+    float: left;
+    height: 140px;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: translateZ(-500px);
+    -ms-transform: translateZ(-500px);
+    -moz-transform: translateZ(-500px);
+    -o-transform: translateZ(-500px);
+    transform: translateZ(-500px);
+    width: 140px;
+}
+
+.slot {
+    height: 100%;
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    width: 100%;
+    -moz-transition: transform 3s ease 0s;
+    -o-transition: transform 3s ease 0s;
+    -webkit-transition: transform 3s ease 0s;
+    transition: transform 3s ease 0s;
+}
+
+    .slot figure {
+        background: #e6e6e6;
+        background: -webkit-gradient(radial, center center, 0, center center, from(#fff), to(#e6e6e6));
+        background: -webkit-radial-gradient(circle, #fff, #e6e6e6);
+        background: -moz-radial-gradient(circle, #fff, #e6e6e6);
+        background: -ms-radial-gradient(circle, #fff, #e6e6e6);
+        border: 1px solid #333;
+        color: #333;
+        display: block;
+        font-size: 80px;
+        font-weight: bold;
+        height: 140px;
+        left: 0;
+        line-height: 140px;
+        margin: 0;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        width: 140px;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .slot.notran {
+        -moz-transition: none;
+        -o-transition: none;
+        -webkit-transition: none;
+        transition: none;
+    }
+
+#slotMachine.preserve {
+    height: auto;
+}
+
+.preserve .reel {
+    -webkit-transform-style: flat;
+    -moz-transform-style: flat;
+    -o-transform-style: flat;
+    transform-style: flat;
+}
+
+.seeth figure {
+    -webkit-backface-visibility: visible;
+    -moz-backface-visibility: visible;
+    -o-backface-visibility: visible;
+    backface-visibility: visible;
+    opacity: 0.8;
+}
+
+@media (min-width: 1200px) {
+    #slotMachine, .reel, .slot figure {
+        height: 170px;
+        width: 170px;
+        line-height: 170px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    #slotMachine, .reel, .slot figure {
+        height: 104px;
+        width: 104px;
+        line-height: 104px;
+    }
+}
